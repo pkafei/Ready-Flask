@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 #-----------------------------
 # initialization
@@ -16,9 +16,15 @@ app.config.update(
 #------------------------------
 
 
+@app.errorhandler("404")
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 @app.route("/")
-def hello():
-    return "Hello from Python!"
+def index():
+    return render_template('index.html')
+
 
 #------------------------------
 #launch
