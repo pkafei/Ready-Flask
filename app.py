@@ -31,6 +31,14 @@ def index():
     return render_template('base.html')
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
 #------------------------------
 #launch
 #------------------------------

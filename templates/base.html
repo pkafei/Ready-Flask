@@ -26,6 +26,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
     {% endblock %}
   </head>
 
@@ -33,13 +34,10 @@
 
     <div class="container">
 
-      <div class="masthead">
-        <ul class="nav nav-justified">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Visualizations</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="{{ url_for('about')}}">About</a></li>
+    <div class="masthead">
+    <ul class="nav nav-justified">
+    <li><a href="{{ url_for ('resources')}}">Resources</a></li>
+    <li><a href="{{ url_for('about')}}">About</a></li>
         </ul>
       </div>
 
@@ -48,8 +46,9 @@
           <h1>PLB Port</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
         <p><a class="btn btn-lg btn-success" href="#">Get started today</a></p>
-      </div>
+     </div>
 
+         
         <hr>
 
         {% block footer %}
