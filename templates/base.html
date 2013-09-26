@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% block head %}
-    <title>{% block title %}{% endblock %} | PKAFEI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pkafei, plburton">
-    <meta name="keywords" content="pkafei, plburton, flask, blog">
-    <meta name="author" content="pkafei, plbuton, Portia Burton">
-    <meta charset="utf-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+{% extends "layout.html" %}
 
-    <!-- Custom styles for this template -->
-    <link href="/home/shikongle/Desktop/Y/Blog/static/css/justified-nav.css" rel="stylesheet">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-    <!-- SUPPORT FOR IE6-8 OF HTML5 ELEMENTS -->
-    <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-    <! --Custom Stylesheet for Flask --!>
-
-    <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    
-  </head>
-  {% endblock %}
-
-  <body>
-
-
+{% block body %}
     <div class="masthead">
       </div>
-
       <!-- Jumbotron -->
     <div class="container">
         <div class="jumbotron">
@@ -49,25 +16,4 @@
         </ul>
      </div>
      </div>
-
-         
-        <hr>
-
-        {% block footer %}
-        <footer class="footer">
-            <p>&copy; A Pkafei Production(built lovingly with Flask)</p>
-        <ul>
-        <li><a href="{{ url_for ('resources')}}">Resources</a></li>
-        <li><a href="{{ url_for('about')}}">About</a></li>
-        <li><a href="{{ url_for('graphs')}}">Graphs</a></li>
-        <li><a href="{{ url_for('tech')}}">Tech</a></li>
-        </ul>
-        </footer>
-        {% endblock %}
-
-    </div>
-    {% block js_footer %}
-      <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
-    {% endblock %}
-  </body>
-</html>
+{% endblock %}
