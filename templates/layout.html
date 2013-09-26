@@ -34,13 +34,12 @@
 
         <footer class="footer">
             <p>&copy; A Pkafei Production(built lovingly with Flask)</p>
-        <ul class = "nav nav-list">
-        <li><a href="{{ url_for ('base')}}">Home</a></li>
-        <li><a href="{{ url_for ('resources')}}">Resources</a></li>
-        <li><a href="{{ url_for('about')}}">About</a></li>
-        <li><a href="{{ url_for('graphs')}}">Graphs</a></li>
-        <li><a href="{{ url_for('tech')}}">Tech</a></li>
-        </ul>
+        <a href="{{ url_for ('base')}}" class ="btn btn-large btn-primary">Home</a>
+        <a href="{{ url_for('about')}}" class ="btn btn-large btn-primary">About</a>
+        <a href="{{ url_for('graphs')}}" class ="btn btn-large btn-primary">Graphs</a>
+        <a href="{{ url_for('tech')}}" class ="btn btn-large btn-primary">Tech</a>
+        <a href="{{ url_for ('resources')}}" class ="btn btn-large btn-primary">Resources</a>
+        
         </footer>
 
     </div>
