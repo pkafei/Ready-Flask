@@ -30,9 +30,11 @@ def page_not_found(e):
 def base():
     return render_template('base.html')
 
+
 @app.route('/home')
 def home():
     return render_template('base.html')
+
 
 @app.route('/about')
 def about():
