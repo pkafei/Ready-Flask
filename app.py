@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, send_from_directory
+import pytumblr
 
 #-----------------------------
 # initialization
@@ -43,7 +44,10 @@ def about():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html')
+    client = pytumblr.TumblrRestClient("CC7HTkB2Kxb3moSvx06HHEZ0XsBv3VlEjMswMotdzjytPVdAHS", "jMzmcNKBDK2g8fF9Holqt4y2Lzk2cC1E7Wz7g7c03Z0zC4bpgI", "MOipE48mUoNcQKnIexDck9mPkTcTdN4rwDQZrmrRAU0nnzzSrn", "DZjQF3rxXlqTQ1iHfcbVyvm4eYZ9jxeYdSeqmhQ1bdfZIQGgMg")
+    blog = client.posts("pkafei")
+    blog["posts"][0]["body"]
+    return render_template('blog.html', body=blog["posts"][0]["body"] )
 
 
 @app.route('/tech')
