@@ -22,6 +22,8 @@ How to Use
 1. Clone the Repo
 2. Install Flask http://flask.pocoo.org/docs/installation/#installation
 3. In templates/index.html in line 16 change the file path to match yours
+4. Go to the root of the directory and in the command line enter "python app.py" without the quotes
+You should be able to see your site locally.
 
 
 Extra
