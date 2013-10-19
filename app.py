@@ -1,6 +1,5 @@
 import os
 from flask import Flask, render_template, send_from_directory
-import pytumblr
 
 #-----------------------------
 # initialization
@@ -29,40 +28,9 @@ def page_not_found(e):
 
 @app.route('/')
 def base():
-    return render_template('base.html')
+    return render_template('index.html')
 
 
-@app.route('/home')
-def home():
-    return render_template('base.html')
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-
-@app.route('/blog')
-def blog():
-    client = pytumblr.TumblrRestClient("CC7HTkB2Kxb3moSvx06HHEZ0XsBv3VlEjMswMotdzjytPVdAHS", "jMzmcNKBDK2g8fF9Holqt4y2Lzk2cC1E7Wz7g7c03Z0zC4bpgI", "MOipE48mUoNcQKnIexDck9mPkTcTdN4rwDQZrmrRAU0nnzzSrn", "DZjQF3rxXlqTQ1iHfcbVyvm4eYZ9jxeYdSeqmhQ1bdfZIQGgMg")
-    blog = client.posts("pkafei")
-    blog["posts"][0]["body"]
-    return render_template('blog.html', body=blog["posts"][0]["body"] )
-
-
-@app.route('/tech')
-def tech():
-    return render_template('tech.html')
-
-
-@app.route('/graphs')
-def graphs():
-    return render_template('graphs.html')
-
-
-@app.route('/resources')
-def resources():
-    return render_template('resources.html')
 #------------------------------
 #launch
 #------------------------------
