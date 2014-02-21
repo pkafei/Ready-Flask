@@ -28,9 +28,6 @@ app.config.update(
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'ico/favicon.ico')
 
-@app.route('/')
-def javascript():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'js/hello.js')
 
 @app.errorhandler(404)
 def page_not_found(e):
