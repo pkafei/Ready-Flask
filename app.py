@@ -1,6 +1,9 @@
 import os
 from flask import Flask, render_template, send_from_directory
 from flask import url_for, redirect
+from flask_s3 import FlaskS3
+
+
 #from flask.ext.assets import Environment, Bundle
 
 #-----------------------------
@@ -8,6 +11,9 @@ from flask import url_for, redirect
 # -----------------------------
 
 app = Flask(__name__)
+app.config['jsflask'] = 'jsflask'
+s3 = FlaskS3(app)
+
 
 app.config.update(
     DEBUG=True,
@@ -20,13 +26,6 @@ app.config.update(
 #ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../static/js')
 
 #app = Flask(__name__, template_folder=ASSETS_DIR, static_folder=ASSETS_DIR)
-
-
-
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'ico/favicon.ico')
 
 
 @app.errorhandler(404)
