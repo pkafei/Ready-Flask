@@ -28,5 +28,5 @@ You should be able to see your site locally.
 
 Extra
 =====
-Feel free to change the Jumbotron-narrow theme if you want to (bootstrap 3 is already included)
+Feel free to change the Jumbotron-narrow theme if you want to (bootstrap 3 is already included).
 
